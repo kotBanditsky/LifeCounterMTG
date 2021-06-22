@@ -4,58 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Imperial Settlers: Roll & Write resources counter</title>
+    <title>MTG Life Counter</title>
     <meta name="author" content="name" />
     <meta name="description" content="description here" />
     <meta name="keywords" content="keywords,here" />
 	<link rel="stylesheet" href="style.css">
-    <link
-      href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
   </head>
 
   
 <body class="bg-gray-100 font-sans">
 
-		<div class="text-xl text-gray-800 md:max-w-lg h-screen" style="font-family:Georgia,serif;">
+		<div class="text-xl text-gray-800 md:max-w-lg h-screen" style="font-family: Liberation Mono;">
 
 			<div class="parent h-full">
-				<div class="div1 back1 content-center"></div>
-				<div class="div2 back2 content-center"></div>
-				<div class="item div3 player-one-life">3</div>
+
+				<div class="item div3 ">
+					<span class="absolute anima circle-one"><span class="number-one">20</span></span>
+					<span class="absolute anima circle-one-second"></span>
+					<span class="absolute anima circle-one-third"></span>
+				</div>
+
 				<div class="item div4 ">4</div>
-				<div class="item div5"><button class="button-back">➕</button></div>
+				<div class="item div5"><button class="plus-one">➕</button></div>
 				<div class="item div6">6</div>
 				<div class="item div7">7</div>
 				<div class="item div8">8</div>
 				<div class="item div9">9</div>
-				<div class="item div10"><button class="button-color">✨</button></div>
-				<div class="item div11"><button class="button-back">➖</button></div>
+				<div class="item div10"><button class="color-one">🙂</button></div>
+				<div class="item div11"><button class="minus-one">➖</button></div>
 				<div class="item div12">12</div>
 				<div class="item div13">13</div>
-				<div class="item div14">14</div>
+
+				<div class="item div14">
+					<span class="counter-one invisible">1</span>
+				</div>
+
 				<div class="item div15">15</div>
-				<div class="item div16 player-two-life">16</div>
+
+				<div class="item div16">
+					<span class="absolute anima circle-two"><span class="number-two">20</span></span>
+					<span class="absolute anima circle-two-second"></span>
+					<span class="absolute anima circle-two-third"></span>
+				</div>
+
 				<div class="item div17">17</div>
 				<div class="item div18">18</div>
-				<div class="item div19">19</div>
+
+				<div class="item div19">
+					<span class="counter-two invisible">1</span>
+				</div>
+
+
 				<div class="item div20">20</div>
 				<div class="item div21">21</div>
-				<div class="item div22"><button class="button-back">➕</button></div>
+				<div class="item div22"><button class="plus-two">➕</button></div>
 				<div class="item div23">23</div>
 				<div class="item div24">24</div>
 				<div class="item div25">25</div>
 				<div class="item div26">26</div>
-				<div class="item div27"><button class="button-color">✨</button></div>
-				<div class="item div28"><button class="button-back">➖</button></div>
-				<div class="item div29 back-symbol-one">29</div>
-				<div class="item div30 back-symbol-two">30</div>
+				<div class="item div27"><button class="color-two">🙂</button></div>
+				<div class="item div28"><button class="minus-two">➖</button></div>
 			</div>
 
 		</div>
-
-
 
 	<script src="script.js"></script>
 
