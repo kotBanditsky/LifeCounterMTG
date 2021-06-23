@@ -151,36 +151,6 @@
   pointer-events: none;
 }
 
-.plus::before {
-  content: "+";
-  height:45px;
-  width:45px;
-  font-size:50px;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
-  font-family:courier;
-  color:rgb(26, 19, 19);
-  pointer-events: none;
-}
-
-.minus::before {
-  content: "-";
-  height:45px;
-  width:45px;
-  font-size:50px;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
-  font-family:courier;
-  color:rgb(26, 19, 19);
-  pointer-events: none;
-}
-
 .plus-one,
 .minus-one,
 .plus-two,
