@@ -1,5 +1,4 @@
 {
-    "dir": "ltr",
     "lang": "en",
     "name": "MTG Life Counter",
     "short_name": "MTG Life Counte",
@@ -9,7 +8,7 @@
     "background_color": "#000000",
     "theme_color": "transparent",
     "description": "Magic: The Gathering Life Counter on JavaScript and Tailwind",
-    "orientation": "portrait",
+    "orientation": "portrait-primary",
     "related_applications": [],
     "prefer_related_applications": false,
     "icons": [],

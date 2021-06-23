@@ -98,7 +98,7 @@ function buttonsControl(button) {
 }
 
 function soundClick() {
-    var audio = new Audio('wav/soft-click.wav');
+    var audio = new Audio('sound/click.mp4');
     audio.play();
 }
 
@@ -143,3 +143,12 @@ function getLightRandomColor() {
     color = "hsl(" + Math.random() * 360 + ", 60%, 75%)";
     return color;
 }
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+      navigator.serviceWorker
+        .register("/serviceWorker.js")
+        .then(res => console.log("service worker registered"))
+        .catch(err => console.log("service worker not registered", err))
+    })
+  }
