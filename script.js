@@ -35,28 +35,28 @@ function buttonsControl(button) {
             NumberA.textContent = counterA;
             soundClick();
             animateClickA();
-            color1.style.backgroundColor = randomColor({luminosity: 'dark', hue: 'monochrome'});
+            color1.style.backgroundColor = getRandomRolor();
             break;
         case 'minus-one':
             counterA--;
             NumberA.textContent = counterA;
             soundClick();
             animateClickA();
-            color1.style.backgroundColor = randomColor({luminosity: 'dark', hue: 'monochrome'});
+            color1.style.backgroundColor = getRandomRolor();
             break;
         case 'plus-two':
             counterB++;
             NumberB.textContent = counterB;
             soundClick();
             animateClickB();
-            color2.style.backgroundColor =  randomColor({luminosity: 'dark', hue: 'green'});
+            color2.style.backgroundColor =  randDarkColor();
             break;
         case 'minus-two':
             counterB--;
             NumberB.textContent = counterB;
             soundClick();
             animateClickB();
-            color2.style.backgroundColor = randomColor({luminosity: 'dark', hue: 'green'});
+            color2.style.backgroundColor = randDarkColor();
             break;
     };
 }
@@ -116,32 +116,29 @@ function animateClickB() {
             }
 }
 
-// let colorDark = '#300b0b';
-// let colorWater = '#f25f9a';
-// let colorSky = '#f25f9a';
-// let colorWood = '#0a8f27';
-// let colorFire = '#f25f9a';
+function randDarkColor() {
+    var lum = -0.25;
+    var hex = String('#' + Math.random().toString(16).slice(2, 8).toUpperCase()).replace(/[^0-9a-f]/gi, '');
+    if (hex.length < 6) {
+        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+    }
+    var rgb = "#",
+        c, i;
+    for (i = 0; i < 3; i++) {
+        c = parseInt(hex.substr(i * 2, 2), 16);
+        c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+        rgb += ("00" + c).substr(c.length);
+    }
+    return rgb;
+}
 
-// function getRandomColor(color) {
-//     let p = 1,
-//         temp,
-//         random = Math.random(),
-//         result = '#';
-
-//     while (p < color.length) {
-//         temp = parseInt(color.slice(p, p += 2), 16)
-//         temp += Math.floor((255 - temp) * random);
-//         result += temp.toString(16).padStart(2, '0');
-//     }
-//     return result;
-// }
-
-
-// function getRandomColor() {
-//     var letters = "0123456789ABCDEF".split('');
-//     var color = "#";
-//     for (var i = 0; i < 6; i++ ) {
-//         color += letters[Math.floor(Math.random() * 16)];
-//     }
-//     return color;
-// }
+function getRandomRolor() {
+    var letters = '64674'.split('');
+    var color = '#';        
+    color += letters[Math.round(Math.random() * 5)];
+    letters = '0123456789ABCDEF'.split('');
+    for (var i = 0; i < 5; i++) {
+        color += letters[Math.round(Math.random() * 15)];
+    }
+    return color;
+} 
