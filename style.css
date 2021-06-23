@@ -1,28 +1,26 @@
-.border-4 {
-  border-color: #1f2937;
-}
-
 .counter-one {
-
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .counter-two {
-  
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .circle-one {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  background: #A3ABFF;
+  background: #e6c199;
 }
 
 .circle-one-second {
   border-radius: 50%;
   width: 250px;
   height: 250px;
-  opacity: 20%;
-  background: #ced1f6;
+  opacity: 60%;
+  background: #e6c199;
   z-index: -1;
 }
 
@@ -30,8 +28,8 @@
   border-radius: 50%;
   width: 300px;
   height: 300px;
-  opacity: 10%;
-  background: #e6e8fa;
+  opacity: 30%;
+  background: #e6c199;
   z-index: -2;
 }
 
@@ -46,21 +44,22 @@
   right: 0;
   text-align: center;
   transform: rotate(180deg);
+  color:#0f1b3d;
 }
 
 .circle-two {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  background: #A3ABFF;
+  background: #e6c199;
 }
 
 .circle-two-second {
   border-radius: 50%;
   width: 250px;
   height: 250px;
-  background: #ced1f6;
-  opacity: 20%;
+  background: #e6c199;
+  opacity: 60%;
   z-index: -1;
 }
 
@@ -68,8 +67,8 @@
   border-radius: 50%;
   width: 300px;
   height: 300px;
-  opacity: 10%;
-  background: #e6e8fa;
+  opacity: 30%;
+  background: #e6c199;
   z-index: -2;
 }
 
@@ -80,6 +79,7 @@
   top: 50%;  
   left: 50%; 
   transform: translate(-50%, -50%); 
+  color:#3d3a0f;
 }
 
 .animate-circle {
@@ -126,53 +126,68 @@
   }
 }
 
+.plus-one:focus,
+.minus-one:focus,
+.plus-two:focus,
+.minus-two:focus {
+  outline: none;
+}
 
- .plus-one {
-	width: 50px;
-	height: 50px;
-	background: red;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
- }
+.plus {
+  height: 45px;
+  width: 45px;
+  background-color: #e6c199;
+  border-radius: 50%;
+  display: inline-block;
+  pointer-events: none;
+}
 
- .minus-one {
-	width: 50px;
-	height: 50px;
-	background: red;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
- }
+.minus {
+  height: 45px;
+  width: 45px;
+  background-color: #e6c199;
+  border-radius: 50%;
+  display: inline-block;
+  pointer-events: none;
+}
 
- .color-one {
-	width: 60px;
-	height: 60px;
- }
+.plus::before {
+  content: "+";
+  height:45px;
+  width:45px;
+  font-size:50px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  font-family:courier;
+  color:rgb(26, 19, 19);
+  pointer-events: none;
+}
 
- 
- .plus-two {
-	width: 50px;
-	height: 50px;
-	background: red;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
- }
+.minus::before {
+  content: "-";
+  height:45px;
+  width:45px;
+  font-size:50px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  font-family:courier;
+  color:rgb(26, 19, 19);
+  pointer-events: none;
+}
 
- .minus-two {
-	width: 50px;
-	height: 50px;
-	background: red;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
- }
-
- .color-two {
-	width: 60px;
-	height: 60px;
- }
+.plus-one,
+.minus-one,
+.plus-two,
+.minus-two {
+  width: 100%;
+	height: 100%;
+}
 
  .parent {
   display: grid;
@@ -192,13 +207,13 @@
   .div2 { grid-area: 7 / 1 / 13 / 6; }
   .div3 { grid-area: 3 / 2 / 5 / 5; }
   .div4 { grid-area: 1 / 1 / 3 / 2; }
-  .div5 { grid-area: 3 / 1 / 5 / 2; }
+  .div5 { grid-area: 1 / 1 / 7 / 2; }
   .div6 { grid-area: 5 / 1 / 7 / 2; }
   .div7 { grid-area: 1 / 2 / 3 / 3; }
   .div8 { grid-area: 1 / 3 / 3 / 4; }
   .div9 { grid-area: 1 / 4 / 3 / 5; }
   .div10 { grid-area: 1 / 5 / 3 / 6; }
-  .div11 { grid-area: 3 / 5 / 5 / 6; }
+  .div11 { grid-area: 1 / 5 / 7 / 6; }
   .div12 { grid-area: 5 / 5 / 7 / 6; }
   .div13 { grid-area: 5 / 4 / 7 / 5; }
   .div14 { grid-area: 5 / 3 / 7 / 4; }
@@ -209,12 +224,12 @@
   .div19 { grid-area: 7 / 3 / 9 / 4; }
   .div20 { grid-area: 7 / 4 / 9 / 5; }
   .div21 { grid-area: 7 / 5 / 9 / 6; }
-  .div22 { grid-area: 9 / 5 / 11 / 6; }
+  .div22 { grid-area: 7 / 5 / 13 / 6; }
   .div23 { grid-area: 11 / 5 / 13 / 6; }
   .div24 { grid-area: 11 / 4 / 13 / 5; }
   .div25 { grid-area: 11 / 3 / 13 / 4; }
   .div26 { grid-area: 11 / 2 / 13 / 3; }
   .div27 { grid-area: 11 / 1 / 13 / 2; }
-  .div28 { grid-area: 9 / 1 / 11 / 2; }
+  .div28 { grid-area: 7 / 1 / 13 / 2; }
   .div29 { grid-area: 1 / 1 / 7 / 6; }
   .div30 { grid-area: 7 / 1 / 13 / 6; }
