@@ -9,7 +9,7 @@
     <meta name="description" content="description here" />
     <meta name="keywords" content="keywords,here" />
 	<link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="tailwind.min.css">
   </head>
 
   
@@ -64,6 +64,13 @@
 		</div>
 
 	<script src="script.js"></script>
+	
+<script>
+// This is the "Offline page" service worker
+import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+const el = document.createElement('pwa-update');
+document.body.appendChild(el);
+</script>
 
 </body>
 
