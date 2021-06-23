@@ -1,4 +1,4 @@
-let counterClickA = 0;
+
 
 let buttons = document.getElementsByTagName("button"); 
 
@@ -25,57 +25,59 @@ let oneCircleB = document.querySelector('.circle-two');
 let twoCircleB = document.querySelector('.circle-two-second');
 let treCircleB = document.querySelector('.circle-two-third');
 
+let color1 = document.getElementById("color1");
+let color2 = document.getElementById("color2");
+
 function buttonsControl(button) {
     switch (button.className) {
         case 'plus-one':
             counterA++;
             NumberA.textContent = counterA;
-            clickCounterA.textContent = counterClickA;
             soundClick();
             animateClickA();
-            setCounterA(counterClickA);
+            color1.style.backgroundColor = randomColor({luminosity: 'dark', hue: 'monochrome'});
             break;
         case 'minus-one':
             counterA--;
             NumberA.textContent = counterA;
-            clickCounterA.textContent = counterClickA;
             soundClick();
             animateClickA();
-            setCounterA(counterClickA);
+            color1.style.backgroundColor = randomColor({luminosity: 'dark', hue: 'monochrome'});
             break;
         case 'plus-two':
             counterB++;
             NumberB.textContent = counterB;
             soundClick();
             animateClickB();
+            color2.style.backgroundColor =  randomColor({luminosity: 'dark', hue: 'green'});
             break;
         case 'minus-two':
             counterB--;
             NumberB.textContent = counterB;
             soundClick();
             animateClickB();
+            color2.style.backgroundColor = randomColor({luminosity: 'dark', hue: 'green'});
             break;
     };
 }
 
+let counterClickA = 0;
+
 function counterClick(button) {
+    clickCounterA.classList.remove('invisible');
+
+    console.log(counterClickA);
+
     if (button.className == 'plus-one' || button.className == 'plus-two') {
         counterClickA++;
-    } else if (button.className == 'minus-one' || button.className == 'minus-two') {
+        clickCounterA.textContent = counterClickA;
+    } 
+    
+    if (button.className == 'minus-one' || button.className == 'minus-two') {
         counterClickA--;
-    }
+        clickCounterA.textContent = counterClickA;
+    }    
 }
-
-function setCounterA(count) {
-
-    clickCounterA.classList.remove('invisible');
-    setTimeout(fix);
-}
-
-function setTimeout(fix){
-    clickCounterA.classList.add('invisible');
-    counterClickA = 0;
-}, 1000); 
 
 function soundClick() {
     var audio = new Audio('wav/soft-click.wav');
@@ -114,4 +116,32 @@ function animateClickB() {
             }
 }
 
+// let colorDark = '#300b0b';
+// let colorWater = '#f25f9a';
+// let colorSky = '#f25f9a';
+// let colorWood = '#0a8f27';
+// let colorFire = '#f25f9a';
 
+// function getRandomColor(color) {
+//     let p = 1,
+//         temp,
+//         random = Math.random(),
+//         result = '#';
+
+//     while (p < color.length) {
+//         temp = parseInt(color.slice(p, p += 2), 16)
+//         temp += Math.floor((255 - temp) * random);
+//         result += temp.toString(16).padStart(2, '0');
+//     }
+//     return result;
+// }
+
+
+// function getRandomColor() {
+//     var letters = "0123456789ABCDEF".split('');
+//     var color = "#";
+//     for (var i = 0; i < 6; i++ ) {
+//         color += letters[Math.floor(Math.random() * 16)];
+//     }
+//     return color;
+// }
