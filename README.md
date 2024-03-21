@@ -1,7 +1,6 @@
 # LifeCounterMTG
- Magic: The Gathering Life Counter on JavaScript and Tailwind
 
-Link to use/demo: https://kotbanditsky.github.io/js-simple-mtg-counter/
+Magic: The Gathering Life Counter on JavaScript and Tailwind
 
 A simple beautiful Life Counter for two players in the Magic: The Gathering. Just run and play.
 
